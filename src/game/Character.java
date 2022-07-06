@@ -4,11 +4,13 @@
  */
 package game;
 
+import game.interfaces.Drawable;
+
 /**
  *
  * @author cahuc
  */
-public class Character {
+public class Character implements Drawable{
 
     protected String name;
     protected int level;
@@ -31,6 +33,11 @@ public class Character {
     public Character(String name, int level) {
         this(name);
         this.level = level;
+    }
+    
+    @Override
+    public void draw(){
+        System.out.println("DRAW CHARACTER");
     }
 
     public void levelUp() {
@@ -101,6 +108,21 @@ public class Character {
 
     public void setGender(char gender) {
         this.gender = gender;
+    }
+
+    @Override
+    public void trace() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void color() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void randomMethod() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

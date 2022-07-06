@@ -14,10 +14,14 @@ public class Barbarian extends Character {
     private int damageReduction;
     private boolean fatigue;
 
+    public Barbarian(String name) {
+        super(name);
+    }
+
     public Barbarian(String name, int level, int rageLimit) {
         super(name, level);
         this.rageLimit = rageLimit;
-        this.damageReduction = 5;
+        this.damageReduction = 1;
         this.fatigue = false;
     }
 
